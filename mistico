@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mozu | Proyecto Mistico Park</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-shape shape-1" aria-hidden="true"></div>
+  <div class="background-shape shape-2" aria-hidden="true"></div>
+
+  <main class="project-page fade-in">
+    <header class="project-header">
+      <h1>Colaboradores - Proyecto Mistico Park</h1>
+      <p>Control de personal de outsourcing en operación diaria.</p>
+    </header>
+
+    <section class="table-card fade-in delay-1" aria-label="Tabla de colaboradores del proyecto Mistico Park">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre del colaborador</th>
+              <th>Puesto</th>
+              <th>Horas semanales</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daniela Soto</td>
+              <td>Coordinadora operativa</td>
+              <td>45</td>
+              <td><span class="status active">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Ricardo León</td>
+              <td>Personal de apoyo</td>
+              <td>42</td>
+              <td><span class="status active">Activo</span></td>
+            </tr>
+            <tr>
+              <td>María Cedeño</td>
+              <td>Auxiliar de limpieza</td>
+              <td>40</td>
+              <td><span class="status vacation">Vacaciones</span></td>
+            </tr>
+            <tr>
+              <td>Jorge Alvarado</td>
+              <td>Vigilante</td>
+              <td>38</td>
+              <td><span class="status sick">Incapacidad</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <a class="back-btn" href="index.html">← Regresar al inicio</a>
+  </main>
+</body>
+</html>
