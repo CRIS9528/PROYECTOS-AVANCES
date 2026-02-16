@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mozu - Servicios de outsourcing corporativo" />
+  <title>Mozu | Proyectos Activos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-shape shape-1" aria-hidden="true"></div>
+  <div class="background-shape shape-2" aria-hidden="true"></div>
+
+  <header class="dashboard-header fade-in">
+    <div class="logo-wrap" aria-label="Logo Mozu">
+      <svg class="logo-icon" viewBox="0 0 120 120" role="img" aria-hidden="true">
+        <circle cx="60" cy="60" r="54" fill="#0c2d66" />
+        <path d="M60 6a54 54 0 0 1 46 26c-8 20-23 36-42 44-7-16-8-33-4-50z" fill="#35b06c" />
+        <path d="M14 40A54 54 0 0 1 60 6c-6 18-5 35 2 51-19 6-36 4-48-17z" fill="#f4f7fb" />
+        <path d="M106 34a54 54 0 0 1-34 72c-14-13-24-28-28-46 19-8 33-24 42-44 8 4 14 10 20 18z" fill="#f9c300" />
+      </svg>
+      <div>
+        <h1>Mozu</h1>
+        <p>Outsourcing estratégico</p>
+      </div>
+    </div>
+
+    <p class="intro">
+      En Mozu impulsamos la operación de nuestros clientes con servicios de
+      mantenimiento, limpieza, seguridad y personal de apoyo, alineados a
+      estándares corporativos de alto desempeño.
+    </p>
+  </header>
+
+  <main class="main-content fade-in delay-1">
+    <section class="section-head">
+      <h2>Proyectos Activos</h2>
+      <span class="accent-line" aria-hidden="true"></span>
+    </section>
+
+    <section id="projects-grid" class="projects-grid" aria-label="Listado de proyectos"></section>
+
+    <p class="helper-text">
+      Para agregar nuevos proyectos, solo añade un objeto al arreglo <code>projectList</code> en
+      <code>index.html</code>.
+    </p>
+  </main>
+
+  <script>
+    // Lista central de proyectos para mantener el crecimiento de la plataforma.
+    const projectList = [
+      { name: "Hotel", page: "hotel.html", icon: "hotel" },
+      { name: "Mistico Park", page: "mistico.html", icon: "park" }
+    ];
+
+    const icons = {
+      hotel: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 21h18v-2H3v2zm2-4h3v-4h2v4h4v-7h2v7h3V3H5v14z" />
+        </svg>
+      `,
+      park: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2l4 5h-3l3 4h-3l4 5h-4v6h-2v-6H7l4-5H8l3-4H8l4-5z" />
+        </svg>
+      `
+    };
+
+    const grid = document.getElementById("projects-grid");
+
+    projectList.forEach((project, index) => {
+      const card = document.createElement("a");
+      card.href = project.page;
+      card.className = "project-card";
+      card.style.animationDelay = `${0.15 * (index + 1)}s`;
+      card.innerHTML = `
+        <span class="icon-wrap">${icons[project.icon] || ""}</span>
+        <span class="project-name">${project.name}</span>
+        <span class="project-cta">Ver colaboradores</span>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
